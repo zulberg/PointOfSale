@@ -9,9 +9,13 @@ function addItem()
   } else {
     newItem=Number(newItem);
     runningTotal=runningTotal+newItem;
+    var dollars=asCurrency(runningTotal);
+    document.getElementById("subtotal").innerHTML=dollars;
+    document.getElementById("price").innerHTML="";
+    setCookie("preTax",runningTotal,1);
   }
-}
-  
+
+
 
   // THEN show an alert: "Enter price as a number"
   //OTHERWISE,
