@@ -23,6 +23,9 @@ function calculateReceipt() {
   document.getElementById("sub").innerHTML=receiptSubtotal;
   document.getElementById("tax").innerHTML=receiptTax;
   document.getElementById("tot").innerHTML=receiptTotal;
+  setCookie("subt",receiptSubtotal,1);
+  setCookie("tx",receiptTax,1);
+  setCookie("total",receiptTotal,1);
   }
 //takes a number and gives a string with the number displayed as USD currency
 function asCurrency(val)
